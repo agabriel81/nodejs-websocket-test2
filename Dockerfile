@@ -13,10 +13,11 @@ RUN bash -c "npm install"
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY health ./health/
-COPY static ./static/
-COPY app.js ./
+#COPY health ./health/
+#COPY static ./static/
+#COPY app.js ./
+COPY server.js
 COPY package.json ./
 
 EXPOSE 8080
-CMD [ "node", "app.js" ]
+CMD [ "node", "server.js" ]
