@@ -16,7 +16,7 @@ RUN bash -c "npm install"
 #COPY health ./health/
 #COPY static ./static/
 #COPY app.js ./
-COPY server.js ./
+COPY app.js ./
 COPY package.json ./
 
 EXPOSE 8080
