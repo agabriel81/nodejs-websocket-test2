@@ -1,4 +1,4 @@
-FROM nodejs-10
+FROM registry.redhat.io/ubi8/nodejs-10
 
 # Create app directory
 WORKDIR /opt/app
