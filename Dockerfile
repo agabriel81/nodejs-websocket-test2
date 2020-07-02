@@ -20,4 +20,4 @@ COPY server.js ./
 COPY package.json ./
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
