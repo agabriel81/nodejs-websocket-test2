@@ -1,7 +1,7 @@
 FROM nodejs
 
 # Create app directory
-WORKDIR /opt/app
+WORKDIR "${APP_ROOT}"
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
