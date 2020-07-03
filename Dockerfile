@@ -18,7 +18,7 @@ RUN bash -c "npm install"
 #COPY app.js ./
 COPY app.js ./
 COPY package.json ./
-COPY index.js ./
+COPY index.html ./
 
 EXPOSE 8080
 CMD [ "node", "app.js" ]
