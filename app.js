@@ -8,7 +8,7 @@ var SampleApp = function () {
     //  Scope.
     var self = this;
 
-    var url = '127.0.0.1:27017/' + process.env.OPENSHIFT_APP_NAME;
+    var url = '0.0.0.0:27017/' + process.env.OPENSHIFT_APP_NAME;
 
     self.setupVariables = function () {
         //  Set the environment variables we need.
@@ -18,7 +18,7 @@ var SampleApp = function () {
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
             //  allows us to run/test the app locally.
-            console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
+            console.warn('No OPENSHIFT_NODEJS_IP var, using 0.0.0.0');
             self.ipaddress = "0.0.0.0";
         }
         ;
@@ -72,7 +72,7 @@ var SampleApp = function () {
 
         self.getRoutes['/'] = function (req, res) {
             res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html'));
+            res.send(self.cache_get('index.js'));
         };
     };
 
