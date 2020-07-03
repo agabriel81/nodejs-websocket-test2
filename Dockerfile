@@ -8,7 +8,7 @@ WORKDIR "${APP_ROOT}"
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN bash -c "npm install"
+RUN bash -c "npm install websocket"
 # If you are building your code for production
 # RUN npm ci --only=production
 
