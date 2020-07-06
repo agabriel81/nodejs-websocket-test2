@@ -9,7 +9,7 @@ WORKDIR "${APP_ROOT}"
 COPY package*.json ./
 
 RUN bash -c "npm install websocket"
-RUN yum install -y net-tools
+RUN sudo yum install -y net-tools
 # If you are building your code for production
 # RUN npm ci --only=production
 
